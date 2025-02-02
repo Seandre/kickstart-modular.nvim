@@ -236,7 +236,16 @@ return {
             require('lspconfig')[server_name].setup(server)
           end,
         },
+        ensure_installed = { "pyright", },
       }
+      
+      require("lspconfig").pyright.setup({
+        settings = {
+          python = {
+            pythonPath = "/Users/spinzon/anaconda3/envs/nvim-env/bin/python",
+          },
+        },
+      })
     end,
   },
 }
